@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XOE-Nl-7B8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Draw View Controller-->
+        <scene sceneID="Nkz-F0-hjn">
+            <objects>
+                <viewController id="XOE-Nl-7B8" customClass="DrawViewController" customModule="ObjCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GKb-WS-6MB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="24" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-k9-Skp">
+                                <rect key="frame" x="140.5" y="376" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="JBA-co-sDw"/>
+                                    <constraint firstAttribute="width" constant="94" id="UUg-Zp-grz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stepperAction:" destination="XOE-Nl-7B8" eventType="valueChanged" id="Ih1-oi-9M3"/>
+                                </connections>
+                            </stepper>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0ch-61-jtI">
+                                <rect key="frame" x="163" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switcherAction:" destination="XOE-Nl-7B8" eventType="valueChanged" id="b7W-72-PXX"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0ch-61-jtI" firstAttribute="centerX" secondItem="GKb-WS-6MB" secondAttribute="centerX" id="8Ar-gu-85t"/>
+                            <constraint firstItem="0ch-61-jtI" firstAttribute="top" secondItem="WEV-k9-Skp" secondAttribute="bottom" constant="22" id="SUH-fm-fd2"/>
+                            <constraint firstItem="tGz-Ie-XCT" firstAttribute="bottom" secondItem="WEV-k9-Skp" secondAttribute="bottom" constant="262" id="p0d-bX-Q99"/>
+                            <constraint firstItem="WEV-k9-Skp" firstAttribute="centerX" secondItem="GKb-WS-6MB" secondAttribute="centerX" id="t2s-fs-6pj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tGz-Ie-XCT"/>
+                    </view>
+                    <connections>
+                        <outlet property="stepper" destination="WEV-k9-Skp" id="UEE-u2-IxE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNY-5o-UFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="105"/>
+        </scene>
+    </scenes>
+</document>
